@@ -3,9 +3,6 @@ const dbConnet = require('../Config/db');
 const fs = require('fs');
 const path = require('path');
 
-/**
- * Obtener todos las pinturas
- */
 const getPinturas = (callback) => {
 	const query = `
     SELECT p.*, pt.nombre, pt.apellido, pt.imagen
@@ -15,9 +12,6 @@ const getPinturas = (callback) => {
 	dbConnet.query(query, callback);
 };
 
-/**
- * Obtener una pintura por ID
- */
 const getPintura = (id, callback) => {
 	const query = `
     SELECT p.*, pt.nombre, pt.apellido, pt.imagen
@@ -28,9 +22,6 @@ const getPintura = (id, callback) => {
 	dbConnet.query(query, [id], callback);
 };
 
-/**
- * Crear una nuevo pintura
- */
 const createPintura = (data, callback) => {
 	const query = 'INSERT INTO pinturas SET ?';
 	const nuevaData = {
@@ -40,9 +31,6 @@ const createPintura = (data, callback) => {
 	dbConnet.query(query, nuevaData, callback);
 };
 
-/**
- * Actualizar una pintura existente
- */
 const updatePintura = (id, data, file, callback) => {
 	const query = 'UPDATE pinturas SET ? WHERE pintura_id = ?';
 
@@ -65,9 +53,6 @@ const updatePintura = (id, data, file, callback) => {
 	}
 };
 
-/**
- * Eliminar una pintura existente
- */
 const deletePintura = (id, callback) => {
 	dbConnet.query('DELETE FROM pinturas WHERE pintura_id = ?', [id], callback);
 };

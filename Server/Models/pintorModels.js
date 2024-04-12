@@ -3,32 +3,20 @@ const dbConnet = require('../Config/db');
 const fs = require('fs');
 const path = require('path');
 
-/**
- * Obtener todos los pintores
- */
 const getPintores = (callback) => {
 	dbConnet.query('SELECT * FROM pintor', callback);
 };
 
-/**
- * Obtener un pintor por ID
- */
 const getPintor = (id, callback) => {
 	dbConnet.query('SELECT * FROM pintor WHERE pintor_id = ?', [id], callback);
 };
 
-/**
- * Crear un nuevo pintor
- */
 const createPintor = (data, callback) => {
 	const query = 'INSERT INTO pintor SET ?';
 	const nuevaData = { ...data, imagen: data.imagen.filename };
 	dbConnet.query(query, nuevaData, callback);
 };
 
-/**
- * Actualizar un pintor existente
- */
 const updatePintor = (id, data, file, callback) => {
 	const query = 'UPDATE pintor SET ? WHERE pintor_id = ?';
 
@@ -51,9 +39,6 @@ const updatePintor = (id, data, file, callback) => {
 	}
 };
 
-/**
- * Eliminar un pintor existente
- */
 const deletePintor = (id, callback) => {
 	dbConnet.query('DELETE FROM pintor WHERE pintor_id = ?', [id], callback);
 };

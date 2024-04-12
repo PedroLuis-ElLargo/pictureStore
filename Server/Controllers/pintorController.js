@@ -81,7 +81,7 @@ const updateItem = (req, res) => {
 			}
 		});
 	} else {
-		updatePintor(id, data, null, (err, result) => {
+		updatePintura(id, data, null, (err, result) => {
 			if (err) {
 				handleHttpError(res, 'Error_En_Update_Item_Pintor');
 				console.log(`Fallo: ${err}`);

@@ -51,6 +51,7 @@ CREATE TABLE `usuario` (
     `usuario_id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `nombre` VARCHAR(65) NOT NULL,
     `apellido` VARCHAR(65) NOT NULL,
+    `nombre_usuario` VARCHAR(25) NOT NULL,
     `email` VARCHAR(100) NOT NULL,
     `clave` VARCHAR(50) NOT NULL,
     `imagen` VARCHAR(100) NOT NULL,
@@ -60,7 +61,6 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 SELECT * FROM `usuario`
-ALTER TABLE usuario MODIFY clave VARCHAR(70) NOT NULL;
 -- --------------------------------------------------------
 --
 -- Table structure for table `favoritas`
@@ -96,5 +96,5 @@ DROP TABLE IF EXISTS `pintor`;
 ALTER TABLE `pintor`
 CHANGE COLUMN aplellido apellido VARCHAR(65) NOT NULL;
 
-ALTER TABLE `usuario`
-DROP COLUMN `nombre_usuario`
+ALTER TABLE `pinturas`
+DROP COLUMN `fecha_eliminacion`
