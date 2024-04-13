@@ -1,0 +1,285 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+body {
+    background-color: rgb(16, 16, 16);
+
+}
+
+h1 {
+    position: relative;
+    color: rgb(87, 86, 86);
+    text-align: center;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+    top: 5px;
+    right: 420px;
+}
+
+main {
+    position: relative;
+    width: 1300px;
+    height: 400px;
+    left: 60px;
+    top: 90px;
+    box-shadow: 0 0 1rem#3d3d3d;
+    border-radius: 1cap;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+   position: relative;
+   text-decoration: none;
+   color: rgb(210, 212, 213)    ;
+   padding: .4rem;
+   background-color:  rgba(4, 41, 41, 0.729);
+   border-radius: 10px;
+   box-shadow: 0 0 4px  rgb(198, 196, 196);
+   left: 30px;
+   top: 50px;
+}
+
+a :hover{
+    color: rgb(249, 107, 63);
+}
+
+.nav-item {
+    font-size: 15px;
+
+}
+
+.img-fluid{
+    position: relative;
+    max-width: 450px;
+    border-radius: 10px;
+    left: 30px;
+    bottom: 90px;
+}
+
+img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+  
+}
+
+
+
+.user-image{
+    width: 70px;
+    border-radius: 100vmax;
+    position: relative;
+    left: -120px;
+    top: -142px;
+}
+
+/* .perfil-user{
+    position: relative;
+    left: 300px;
+    bottom: 120px;  
+    color: rgb(169, 168, 168);
+} */
+ /* .container-user-image{
+    position: relative;
+    right: -5px;  
+    bottom: 100px; 
+     
+} */  
+
+
+.user-title{
+  position: relative;
+  width: 170px;
+  color: rgb(148, 145, 145);
+  text-align: center;
+  border-radius: 5px;
+  top: 69px;
+  left: 60px;
+  font-size: 20px;
+} 
+
+.user-position{
+ text-align: center;
+ width: 190px;
+ border-radius: 5px;
+}
+
+h5{
+ text-align: center;
+ width: 130px;
+ border-radius: 5px; 
+ font-size: 17px;
+}
+
+
+/* .img-5{
+    position: relative;
+    max-width: 400px;
+    width: 230px;
+    border-radius: 10px;
+    left: 500px;
+    bottom: 317px;
+} */
+
+/* .perfil-usuario{
+   position: relative;
+   left: 260px;
+   color: rgb(18, 21, 25);
+   right: 90px;
+} */
+
+ .user-img{
+    width: 50px;
+    border-radius: 5px;
+}
+
+.total{
+    margin: auto;
+    width: 320px;
+    height: 100px;
+    position: relative;
+    background-color: #2f2f2f;
+    border-radius: 1cap;
+    bottom: -190px;
+    left: 470px;
+    gap: 1rem;
+}
+
+.sub{
+    position: relative;
+    margin: auto;
+    background-color:#494949;
+    left: 260px;
+    top: -12px;
+    color: rgba(250, 235, 215, 0.719);
+    padding: .2rem;
+    border-radius: 1cap;
+}
+
+.sub-total{ 
+    color: rgba(250, 235, 215, 0.716);
+    position: relative;
+    margin: auto;
+    left: 10px;
+    top: 9px;
+    background-color:#494949;
+    padding: .2rem;
+    border-radius: 1cap;
+}
+
+.check{
+    color: rgb(227, 227, 227);
+    border: 0px;
+    position: relative;
+    text-align: center;
+    background-color: #494949;
+    border-radius: 1cap;
+    padding: .2rem;
+    margin: 33px auto;
+    width: 290px;
+    left: 16px;
+    
+}
+
+.user-position{
+    color: rgb(212, 215, 217);
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    width: 290px;
+    border-radius: 1cap;
+    left: 0px;
+    bottom: 200px;
+}
+
+ .tarjeta{
+    position: relative;
+    top: -10px;
+     right: 50px;
+}  
+
+
+.titulo{
+    position: relative;
+    color: antiquewhite;
+    text-align: center;
+    bottom: 10px;
+    font-size: 30px;
+}
+ .head{
+    position: relative;
+    bottom: 200px;
+ }
+
+
+
+ .trending-desc{
+    width: 300px;
+    bottom: 200px;
+    position: relative;
+    text-align: center;
+    left: 510px;
+ }
+
+ .oferta{
+    color: rgb(203, 206, 208);
+    position: relative;
+    background-color: #2d2c2c;
+    bottom: 180px;
+    border-radius: 1cap;
+    width: 390px;
+    height: 120px;
+ }
+
+ .Tiempo{
+    position: relative;
+    left: 250px;
+    bottom: 40px;
+ }
+
+ .numero{
+    position: relative;
+    top: 69px;
+    left: 90px;
+ }
+
+ .numeros {
+    position: relative;
+    left: 4px;
+    top: 69px;
+    left: -90px;
+}
+
+hr{vertical-align: 3cap;
+    width: 2rem;
+    background-color: brown;
+}
+
+.algo{
+    position: relative;
+    background-color: rgb(166, 166, 167);
+    width: 2px;
+    height: 70px;
+    left: 190px;
+    bottom: 50px;
+}
+.alg{
+    margin: auto;
+    position: relative;
+    background-color: rgb(76, 76, 77);
+    width: 2px;
+    height: 390px;
+    left: 230px;
+    bottom: 315px;
+}
+
+input{
+    position: relative;
+    left: 180px;
+    top: 17px;
+}
