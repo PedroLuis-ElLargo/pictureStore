@@ -1,0 +1,14 @@
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencias
+node_modules/
+
+# Caché y logs
+*.log
+npm-debug.log*
+
+# Configuración específica del editor
+.vscode/
+.idea/
