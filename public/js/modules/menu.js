@@ -1,5 +1,11 @@
 export function setupMenu() {
-  document.querySelectorAll(".menu-links li a").forEach((link) => {
+  const menuLinks = document.querySelectorAll(".menu-links li a");
+  const menuList = document.querySelector(".menu-links");
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+
+  if (!menuLinks.length || !menuList || !hamburgerIcon) return;
+
+  menuLinks.forEach((link) => {
     link.addEventListener("click", function () {
       document
         .querySelector(".menu-links li.active")
@@ -8,10 +14,8 @@ export function setupMenu() {
     });
   });
 
-  document
-    .querySelector(".hamburger-icon")
-    .addEventListener("click", function () {
-      document.querySelector(".menu-links").classList.toggle("left");
-      this.classList.toggle("ham-style");
-    });
+  hamburgerIcon.addEventListener("click", function () {
+    menuList.classList.toggle("left");
+    this.classList.toggle("ham-style");
+  });
 }
