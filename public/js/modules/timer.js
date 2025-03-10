@@ -1,32 +1,39 @@
-export function iniciarTemporizador(horas, minutos, segundos) {
-  const timerElement = document.getElementById("timer");
-  if (!timerElement) return;
+export function iniciarTemporizadores(horas, minutos, segundos) {
+  const timers = document.querySelectorAll(".timer"); // Selecciona todos los temporizadores
 
-  function actualizarTiempo() {
-    if (horas === 0 && minutos === 0 && segundos === 0) {
-      timerElement.innerText = "Venta Finalizada";
-      clearInterval(intervalo);
-      return;
-    }
+  if (timers.length === 0) return;
 
-    timerElement.innerText =
-      `${String(horas).padStart(2, "0")}h:` +
-      `${String(minutos).padStart(2, "0")}m:` +
-      `${String(segundos).padStart(2, "0")}s`;
+  timers.forEach((timerElement) => {
+    let h = horas,
+      m = minutos,
+      s = segundos;
 
-    if (segundos === 0) {
-      if (minutos === 0) {
-        if (horas > 0) horas--;
-        minutos = 59;
-      } else {
-        minutos--;
+    function actualizarTiempo() {
+      if (h === 0 && m === 0 && s === 0) {
+        timerElement.innerText = "Venta Finalizada";
+        clearInterval(intervalo);
+        return;
       }
-      segundos = 59;
-    } else {
-      segundos--;
-    }
-  }
 
-  actualizarTiempo();
-  const intervalo = setInterval(actualizarTiempo, 1000);
+      timerElement.innerText =
+        `${String(h).padStart(2, "0")}h:` +
+        `${String(m).padStart(2, "0")}m:` +
+        `${String(s).padStart(2, "0")}s`;
+
+      if (s === 0) {
+        if (m === 0) {
+          if (h > 0) h--;
+          m = 59;
+        } else {
+          m--;
+        }
+        s = 59;
+      } else {
+        s--;
+      }
+    }
+
+    actualizarTiempo();
+    const intervalo = setInterval(actualizarTiempo, 1000);
+  });
 }
