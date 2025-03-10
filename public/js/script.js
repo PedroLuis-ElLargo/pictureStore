@@ -1,7 +1,8 @@
 import { setupMenu } from "./modules/menu.js";
 import { setupTheme } from "./modules/theme.js";
 import { iniciarTemporizadores } from "./modules/timer.js";
-import { setupSearch } from "./modules/buscadorPinturas.js"; // 🔹 Importamos el buscador
+import { setupSearch } from "./modules/buscadorPinturas.js";
+import { renderFavoritos } from "./modules/cardFavoritos.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   setupMenu();
@@ -19,4 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "h3",
     ".fire-user"
   );
+
+  // funcion para las cards de favoritos
+  renderFavoritos();
 });
